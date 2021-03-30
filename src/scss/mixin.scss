@@ -1,0 +1,37 @@
+@mixin flex {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-wrap: wrap;
+} 
+
+ .container{
+     width: 90%;
+     margin: 0 auto;
+ }
+ html {
+     scroll-behavior: smooth;
+ }
+
+
+@mixin imganime {
+    @keyframes imganime {
+        0%{
+            transform: rotate(360deg);
+            transition: $transition;
+        }
+         100%{
+            transform: rotate(-360deg);
+            transition: $transition;
+        }
+    }
+}
+
+
+$heading:#61dafb;
+$white:#ffffff; 
+$banner-bg:#282c34;
+$header-bg:#20232a;
+$transition:all .3s ease-in-out;
+$mid:center;
+$cap:capitalize;
