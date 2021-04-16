@@ -1,13 +1,15 @@
 import React from 'react';
 // import Footerlogo from '../image/footer-logo';
+import {Link} from 'react-router-dom';
+import Footerlogo from '../image/footer-logo.png';
 export default function Footer () {
     return (
         <>
             <section className="Bottom-Link">
                  <div className="container">
                  <div class="Btn-wrp">
-                       <a class="btn1" title="Get started">Get started</a>
-                       <a class="btn2" title="tutorial">Take the Tutorial</a>
+                 <Link to = "/getting" className="btn1" title="Get started">Get started</Link>
+                 <Link to = "/tutorail" className="btn2" title="tutorial">Take the Tutorial</Link>
                      </div>
                  </div>
              </section>
@@ -16,7 +18,7 @@ export default function Footer () {
                     <div className="Footer-content">
                           <div className="ft-Left">
                               <a href="https://opensource.facebook.com/projects/">
-                                  <img src=  "" alt="img"/>
+                                  <img src=   {Footerlogo} alt="img"/>
                               </a> 
                               <p>
                               Copyright © 2021 Facebook Inc.    

@@ -6,4 +6,8 @@
 html {
   scroll-behavior: smooth;
 }
+
+a {
+  text-decoration: none;
+}
 /*# sourceMappingURL=mixin.css.map */

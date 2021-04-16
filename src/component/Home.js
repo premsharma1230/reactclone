@@ -1,19 +1,15 @@
-import React from 'react';
-import Header from './Header';
+import React from 'react'; 
 import  Simplecomp from './Simplecomponent';
-import  Footer from './Footer';
+import Banner from './Banner';
 export default function Home (){
     return(
-        <>
-          <main> 
-              <Header/> 
-              <Component/>
-              <Simplecomp h2 ="A Simple Component"/>
-              <Simplecomp h2 ="A Stateful Component"/>
-              <Simplecomp h2 ="An Application"/>
-              <Simplecomp h2 ="A Component Using External Plugins"/>
-              <Footer/>
-          </main>
+        <> 
+            <Banner/>
+            <Component/>
+            <Simplecomp h2 ="A Simple Component"/>
+            <Simplecomp h2 ="A Stateful Component"/>
+            <Simplecomp h2 ="An Application"/>
+            <Simplecomp h2 ="A Component Using External Plugins"/> 
         </>
     )
 }

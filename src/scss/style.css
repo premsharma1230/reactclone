@@ -40,6 +40,14 @@ html {
   scroll-behavior: smooth;
 }
 
+a {
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 main header {
   padding: .7rem 0;
   background: #20232a;
@@ -67,6 +75,9 @@ main header nav {
 
 main header nav .Logo {
   width: 10%;
+}
+
+main header nav .Logo a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -82,9 +93,11 @@ main header nav .Logo {
       -ms-flex-pack: start;
           justify-content: flex-start;
   cursor: pointer;
+  text-decoration: none;
+  color: currentColor;
 }
 
-main header nav .Logo img {
+main header nav .Logo a img {
   max-width: 20%;
   -webkit-animation: imganime 3s linear infinite;
           animation: imganime 3s linear infinite;
@@ -120,14 +133,14 @@ main header nav .Logo img {
   }
 }
 
-main header nav .Logo img:hover {
+main header nav .Logo a img:hover {
   -webkit-animation-play-state: paused;
           animation-play-state: paused;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
-main header nav .Logo h2 {
+main header nav .Logo a h2 {
   font-size: 1.3em;
   font-weight: bold;
   text-transform: capitalize;
@@ -341,26 +354,20 @@ main .Component-Wrapper {
 }
 
 main .Component-Wrapper .Component-Content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-bottom: 3rem;
   border-bottom: 1px solid #eee;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(240px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-gap: 2rem 2rem;
 }
 
 main .Component-Wrapper .Component-Content .Comp1 {
-  width: 30%;
+  width: 100%;
 }
 
 main .Component-Wrapper .Component-Content .Comp1 h2 {
@@ -575,7 +582,7 @@ main .Simple-Wrapper .Simp-content .Simp-Right .S2 .Editorcontent {
 }
 
 main .Bottom-Link {
-  margin: 1rem 0 0;
+  margin: 3rem 0 0;
   padding: 3rem 0;
   background: #282c34;
 }
@@ -622,6 +629,250 @@ main .Bottom-Link .Btn-wrp .btn1:hover {
           transform: scale(1.029);
 }
 
+main .Getting-wrp {
+  height: auto;
+  padding: 4rem 0 0 0;
+}
+
+main .Getting-wrp .Getting-Content-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: inherit;
+      -ms-flex-align: inherit;
+          align-items: inherit;
+}
+
+main .Getting-wrp .Gt-Left-side {
+  width: 64%;
+}
+
+main .Getting-wrp .Gt-Left-side .getting-heading {
+  padding: 0 0 2rem;
+  border-bottom: 1px solid #eee;
+  margin: 0 0 2rem;
+}
+
+main .Getting-wrp .Gt-Left-side .getting-heading h2 {
+  font-size: 2.6em;
+  text-transform: capitalize;
+  font-weight: bold;
+  word-spacing: 1px;
+  letter-spacing: .5px;
+  line-height: 1.5;
+  padding: 2rem 0;
+  color: #000;
+}
+
+@-webkit-keyframes text-anime {
+  0% {
+    background-image: -webkit-gradient(linear, left top, right top, from(#000), to(#000000));
+    background-image: linear-gradient(to right, #000, #000000);
+    background-position: -250px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  100% {
+    background-position: 400px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-transform: skew(10px);
+            transform: skew(10px);
+    background-image: -webkit-gradient(linear, left top, right top, from(#000), color-stop(#000000), to(#61dafb));
+    background-image: linear-gradient(to right, #000, #000000, #61dafb);
+  }
+}
+
+@keyframes text-anime {
+  0% {
+    background-image: -webkit-gradient(linear, left top, right top, from(#000), to(#000000));
+    background-image: linear-gradient(to right, #000, #000000);
+    background-position: -250px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  100% {
+    background-position: 400px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-transform: skew(10px);
+            transform: skew(10px);
+    background-image: -webkit-gradient(linear, left top, right top, from(#000), color-stop(#000000), to(#61dafb));
+    background-image: linear-gradient(to right, #000, #000000, #61dafb);
+  }
+}
+
+main .Getting-wrp .Gt-Left-side .getting-heading p {
+  line-height: 1.5;
+  word-spacing: .5px;
+  letter-spacing: .5px;
+  font-size: 1.1em;
+  text-transform: capitalize;
+  padding: 1rem 0;
+  color: #6d6d6d;
+}
+
+main .Getting-wrp .Gt-Left-side .getting-heading p b {
+  font-weight: bold;
+  color: #000;
+}
+
+main .Getting-wrp .Gt-Left-side .getting-heading p a {
+  padding: .2rem .4rem;
+  background: #bbeffd4d;
+  display: inline-block;
+  margin: .5rem 0 0;
+  text-decoration: none;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+main .Getting-wrp .Gt-Left-side .getting-heading p a:hover {
+  text-decoration: underline;
+  color: #000;
+  background: #70d0eb60;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+main .Getting-wrp .Gt-Left-side .Group-Link .grp-unorder li {
+  line-height: 1.5;
+  word-spacing: .5px;
+  letter-spacing: .5px;
+  font-size: 1.1em;
+  text-transform: capitalize;
+  padding: .3rem 0;
+  color: #6d6d6d;
+}
+
+main .Getting-wrp .Gt-Left-side .Group-Link .grp-unorder li a {
+  padding: .2rem .4rem;
+  background: #bbeffd4d;
+  display: inline-block;
+  margin: .2rem 0 0;
+  text-decoration: none;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+main .Getting-wrp .Gt-Left-side .Group-Link .grp-unorder li a:hover {
+  color: #000;
+  background: #70d0eb60;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  -webkit-transform: translateX(5px);
+          transform: translateX(5px);
+}
+
+main .Getting-wrp .Gt-Right-side {
+  width: 34%;
+}
+
+main .Getting-wrp .Gt-Right-side .Tab-page_wrapper {
+  height: 100vh;
+  background: #eee;
+  padding: 3rem 0 0 3rem;
+  list-style-type: none;
+  position: fixed;
+  z-index: 99;
+  width: 34%;
+  right: -17px;
+  overflow: auto;
+  top: 56px;
+}
+
+main .Getting-wrp .Gt-Right-side .Tab-page_wrapper .Collap-heading {
+  padding: .4rem 0;
+  margin: .8rem 0;
+}
+
+main .Getting-wrp .Gt-Right-side .Tab-page_wrapper .Collap-heading h2 {
+  font-size: 1em;
+  text-transform: uppercase;
+  line-height: 1.5;
+  letter-spacing: .5px;
+  word-spacing: .6px;
+  display: inline-block;
+  color: #6d6d6d;
+  cursor: pointer;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+main .Getting-wrp .Gt-Right-side .Tab-page_wrapper .Collap-heading h2 img {
+  max-width: 15px;
+}
+
+main .Getting-wrp .Gt-Right-side .Tab-page_wrapper .Collap-heading h2:hover {
+  color: #000;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  -webkit-transform: scale(1.005);
+          transform: scale(1.005);
+}
+
+main .Getting-wrp .Gt-Right-side .Tab-page_wrapper .Collap-heading h2 .Arrow-down {
+  padding: 0 .5rem;
+}
+
+main .Getting-wrp .Gt-Right-side .Tab-page_wrapper .collap-content h3 {
+  text-transform: capitalize;
+  line-height: 1.5;
+  letter-spacing: .5px;
+  word-spacing: .6px;
+  font-size: 1em;
+  color: #000;
+  border-left: 4px solid #61dafb;
+  font-weight: bold;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  padding: 0 0 0 .7rem;
+  margin-bottom: .7rem;
+}
+
+main .Getting-wrp .Gt-Right-side .Tab-page_wrapper .collap-content h3:hover {
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  color: #6d6d6d;
+}
+
+main .Getting-wrp .Gt-Right-side .Tab-page_wrapper .collap-content .collp-unorder1 {
+  padding: 0 0 0 1rem;
+}
+
+main .Getting-wrp .Gt-Right-side .Tab-page_wrapper .collap-content .collp-unorder1 li {
+  padding: 0 0 .8rem;
+  list-style-type: none;
+}
+
+main .Getting-wrp .Gt-Right-side .Tab-page_wrapper .collap-content .collp-unorder1 li a {
+  text-decoration: none;
+  color: #1a1a1a;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+main .Getting-wrp .Gt-Right-side .Tab-page_wrapper .collap-content .collp-unorder1 li a:hover {
+  color: #6d6d6d;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+main .Getting-wrp .Gt-Right-side .Tab-page_wrapper .collapese-2 .collp-unorder1 li {
+  list-style-type: decimal;
+}
+
 footer {
   background: #20232a;
   color: #fff;
@@ -650,6 +901,11 @@ footer .Footer-content {
 
 footer .Footer-content .ft-Left {
   width: 40%;
+}
+
+footer .Footer-content .ft-Left img {
+  max-width: 40%;
+  margin-bottom: 1rem;
 }
 
 footer .Footer-content .ft-Right {
